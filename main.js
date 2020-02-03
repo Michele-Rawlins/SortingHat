@@ -24,6 +24,14 @@ cardAppear(createStudent);
    document.getElementById('sort').addEventListener('click',buildStudent);
  };
 
+ const expelButton = ()=> {
+     document.getElementById('expel').addEventListener('click,');
+  expelStudent.push(createStudent);
+
+ };
+
+
+
 // const buttonId = e.target.id;
     // if(buttonId === 'form') {
         // formAppear('');
@@ -83,7 +91,8 @@ for(let i =0; i < studentArray.length; i++){
     domString +=  `<div class="card-body">`;
     domString += `<h5 class="card-title">${studentArray[i].name}</h5>`;
     domString +=  `<h6 class="card-subtitle mb-2 text-muted">${studentArray[i].house}</h6>`;
-    domString +=  `<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>`;
+    domString +=  `<p class="card-text">Welcome to our house!!!  Please learn our rules and conduct yourself appropriately.</p>`;
+    domString += `<button id = "expel">Expel</button>`
     domString += `</div>`;
     domString += `</div>`;
 
