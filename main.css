@@ -3,8 +3,12 @@ body {
 }
 
 .card {
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPmzmkltXwZkYQCgd_etLwvy5fw_OFqaBiFrKKQAH1dN0DGZRW);
-    background-repeat: no-repeat;
     width: 350px;
     text-decoration-color: cornsilk;
+}
+
+.card-body.Gryffindor {
+    background-color: yellow;
+    box-shadow: black;
+
 }

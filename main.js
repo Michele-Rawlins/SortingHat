@@ -24,9 +24,17 @@ cardAppear(createStudent);
    document.getElementById('sort').addEventListener('click',buildStudent);
  };
 
+
+const removeStudent = ()=> {
+    let removeCard = document.getElementById("expel");
+    removeCard.remove(cardAppear);
+};
+
+
+
  const expelButton = ()=> {
-     document.getElementById('expel').addEventListener('click,');
-  expelStudent.push(createStudent);
+     document.getElementById('expel').addEventListener('click',removeStudent);
+  expelStudent.push();
 
  };
 
@@ -87,8 +95,8 @@ const cardAppear= (studentArray)=>{
 for(let i =0; i < studentArray.length; i++){
     
     
-    domString += `<div class="card" style="width: 18rem;">`;
-    domString +=  `<div class="card-body">`;
+    domString += `<div class="card" style="width: 18rem"; "d-flex flex-wrap">`;
+    domString +=  `<div class="card-body ${studentArray[i].house}">`;
     domString += `<h5 class="card-title">${studentArray[i].name}</h5>`;
     domString +=  `<h6 class="card-subtitle mb-2 text-muted">${studentArray[i].house}</h6>`;
     domString +=  `<p class="card-text">Welcome to our house!!!  Please learn our rules and conduct yourself appropriately.</p>`;
