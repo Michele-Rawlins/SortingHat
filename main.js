@@ -40,9 +40,11 @@ const removeStudent = ()=> {
 
 
 
-// const buttonId = e.target.id;
-    // if(buttonId === 'form') {
-        // formAppear('');
+const buttonId = e.target.id;
+// (let i = 0; i < studentArray.length;i++)
+// =button id
+    if(buttonId === 'form') {
+        formAppear('');
 // };
 
 
