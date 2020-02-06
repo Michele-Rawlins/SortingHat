@@ -32,19 +32,19 @@ const removeStudent = ()=> {
 
 
 
- const expelButton = ()=> {
-     document.getElementById('expel').addEventListener('click',removeStudent);
-  expelStudent.push();
+//  const expelButton = ()=> {
+    //  document.getElementById('expel').addEventListener('click',removeStudent);
+//   expelStudent.push();
 
- };
+//  };
 
 
 
-const buttonId = e.target.id;
+// const buttonId = e.target.id;
 // (let i = 0; i < studentArray.length;i++)
 // =button id
-    if(buttonId === 'form') {
-        formAppear('');
+    // if(buttonId === 'expel') {
+        // formAppear('');
 // };
 
 

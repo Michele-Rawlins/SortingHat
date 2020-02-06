@@ -8,7 +8,16 @@ body {
 }
 
 .card-body.Gryffindor {
-    background-color: yellow;
+    background-color:red;
     box-shadow: black;
 
+}
+.card-body.Hufflepuff {
+    background-color: yellow;
+}
+.card-body.Slytherin {
+    background-color: green;
+}
+.card-body.Ravenclaw {
+    background-color: blue;
 }
