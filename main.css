@@ -1,23 +1,43 @@
 body {
-    background-color: rgb(156, 160, 160);
+  background-image: repeating-radial-gradient(rgb(243, 194, 194), rgb(248, 248, 121), rgb(195, 247, 195), rgb(194, 194, 243));
 }
+
+.jumbotron {
+    background-image: repeating-linear-gradient(red, yellow , green , blue);
+
+    
+}
+
 
 .card {
-    width: 350px;
-    text-decoration-color: cornsilk;
+    width: 275px;
+    box-shadow: 5px 5px black;
+    padding: 3px;
+    height: 300px;
+    border: 5px black;
+}
+div.card {
+margin: 3px 3px 3px 8px;
+
 }
 
+
+
+
 .card-body.Gryffindor {
-    background-color:red;
-    box-shadow: black;
+    background-image:linear-gradient(red, white);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 .card-body.Hufflepuff {
-    background-color: yellow;
+    background-image: linear-gradient(rgb(255, 255, 0), white);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .card-body.Slytherin {
-    background-color: green;
+    background-image: linear-gradient(green, white);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .card-body.Ravenclaw {
-    background-color: blue;
+    background-image: linear-gradient(blue, white);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

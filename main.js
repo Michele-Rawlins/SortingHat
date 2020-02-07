@@ -27,22 +27,22 @@ cardAppear(createStudent);
 
 const removeStudent = ()=> {
     let removeCard = document.getElementById("expel");
-    removeCard.remove(cardAppear);
+    removeCard.remove(buildStudent);
 };
 
 
 
-//  const expelButton = ()=> {
-    //  document.getElementById('expel').addEventListener('click',removeStudent);
-//   expelStudent.push();
+ const expelButton = (removeStudent)=> {
+     document.getElementById('expel').addEventListener('click',removeStudent);
+  expelButton.parentNode.removeChild('expel'); expelStudent.push();
 
-//  };
+ };
 
 
 
 // const buttonId = e.target.id;
 // (let i = 0; i < studentArray.length;i++)
-// =button id
+// =buttonId
     // if(buttonId === 'expel') {
         // formAppear('');
 // };
@@ -71,13 +71,6 @@ sortButton();
 
 
 };
-
-
-
-
-
-
-
 
 // const createCard = (e) => {
     // console.log(e);
@@ -115,7 +108,7 @@ printToDom('card',domString);
 
 const events = () => {
     document.getElementById('form').addEventListener('click',formAppear);
-    // document.getElementById('card').addEventListener('click',formAppear);
+    document.getElementById('expel').addEventListener('click',removeStudent);
     // document.getElementById('yellow').addEventListener('click',chooseColor);
 }
 
