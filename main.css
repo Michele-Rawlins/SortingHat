@@ -3,7 +3,7 @@ body {
 }
 
 .jumbotron {
-    background-image: repeating-linear-gradient(red, yellow , green , blue);
+    background-image: repeating-radial-gradient(red, yellow , green , blue);
 
     
 }

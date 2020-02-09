@@ -27,7 +27,7 @@ cardAppear(createStudent);
 
 const removeStudent = ()=> {
     let removeCard = document.getElementById("expel");
-    removeCard.remove(buildStudent);
+    removeCard.remove(createStudent);
 };
 
 
@@ -41,10 +41,9 @@ const removeStudent = ()=> {
 
 
 // const buttonId = e.target.id;
-// (let i = 0; i < studentArray.length;i++)
-// =buttonId
+// for(let i = 0; i < studentArray.length; i++)
     // if(buttonId === 'expel') {
-        // formAppear('');
+        // expelButton(removeStudent);
 // };
 
 
@@ -108,7 +107,7 @@ printToDom('card',domString);
 
 const events = () => {
     document.getElementById('form').addEventListener('click',formAppear);
-    document.getElementById('expel').addEventListener('click',removeStudent);
+    document.getElementById('expel').addEventListener('click',expelButton);
     // document.getElementById('yellow').addEventListener('click',chooseColor);
 }
 
