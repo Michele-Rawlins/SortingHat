@@ -41,10 +41,10 @@ const removeStudent = ()=> {
 
 
 // const buttonId = e.target.id;
-// (let i = 0; i < studentArray.length;i++)
+// (let i = 0; i < studentArray.length;i++);
 // =buttonId
     // if(buttonId === 'expel') {
-        // formAppear('');
+        // expelButton('');
 // };
 
 
@@ -108,7 +108,7 @@ printToDom('card',domString);
 
 const events = () => {
     document.getElementById('form').addEventListener('click',formAppear);
-    document.getElementById('expel').addEventListener('click',removeStudent);
+    document.getElementById('expel').addEventListener('click',expelButton);
     // document.getElementById('yellow').addEventListener('click',chooseColor);
 }
 
