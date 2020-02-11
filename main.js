@@ -25,17 +25,23 @@ cardAppear(createStudent);
  };
 
 
-const removeStudent = ()=> {
-    let removeCard = document.getElementById("expel");
-    removeCard.remove(buildStudent);
+const removeStudent = (i)=> {
+    removeOrigStudent = createStudent.splice(i,1)
+    expelStudent.push(removeOrigStudent);
+    console.log(expelStudent);
+    
+    // let removeCard = document.getElementById("expel");
+    // removeCard.splice(buildStudent);
 };
 
 
 
  const expelButton = (removeStudent)=> {
-     document.getElementById('expel').addEventListener('click',removeStudent);
+   for(let i = 0; i < studentArray.length; i++){
+   console.log('expelButton');
+    document.getElementById('expel').addEventListener('click',removeStudent);
   expelButton.parentNode.removeChild('expel'); expelStudent.push();
-
+   }
  };
 
 
@@ -48,7 +54,7 @@ const removeStudent = ()=> {
 // };
 
 
-const formAppear= (form)=>{
+const formAppear= ()=>{
     let domString = "";
     
     domString += `<form class="form-inline">`;
@@ -95,7 +101,7 @@ for(let i =0; i < studentArray.length; i++){
     domString += `<h5 class="card-title">${studentArray[i].name}</h5>`;
     domString +=  `<h6 class="card-subtitle mb-2 text-muted">${studentArray[i].house}</h6>`;
     domString +=  `<p class="card-text">Welcome to our house!!!  Please learn our rules and conduct yourself appropriately.</p>`;
-    domString += `<button id = "expel">Expel</button>`
+    domString += `<a onClick = "removeStudent(${i})" id = "expel">Expel</a>`
     domString += `</div>`;
     domString += `</div>`;
 
@@ -108,7 +114,7 @@ printToDom('card',domString);
 
 const events = () => {
     document.getElementById('form').addEventListener('click',formAppear);
-    document.getElementById('expel').addEventListener('click',expelButton);
+    // document.getElementById('expel').addEventListener('click',expelButton);
     // document.getElementById('yellow').addEventListener('click',chooseColor);
 }
 
