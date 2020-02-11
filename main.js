@@ -15,6 +15,7 @@ const buildStudent=() => {
             
     name: studentName,
     house: house[Math.floor(Math.random()*house.length)],
+    id: "", //to do make random id
     }  
 createStudent.push(student);
 cardAppear(createStudent);
@@ -36,14 +37,17 @@ const removeStudent = (i)=> {
 
 
 
- const expelButton = (removeStudent)=> {
-   for(let i = 0; i < studentArray.length; i++){
-   console.log('expelButton');
-    document.getElementById('expel').addEventListener('click',removeStudent);
-  expelButton.parentNode.removeChild('expel'); expelStudent.push();
-   }
- };
+ const expelButtons = ()=> {
+     //get expel buttons (all) as document.getelementsby class name
+//push into a new const and loop over const 
+//button "I" add event listerner
+// expel student function
+// call expel buttons in student builder
 
+
+
+   console.log('expelButton');
+ };
 
 
 // const buttonId = e.target.id;
@@ -91,17 +95,16 @@ sortButton();
     // duckPrinter(selectedDucks);
 // };
 const cardAppear= (studentArray)=>{
-    console.log('cardAppear')
     let domString = "";
-for(let i =0; i < studentArray.length; i++){
+    for(let i =0; i < studentArray.length; i++){
     
     
-    domString += `<div class="card" style="width: 18rem"; "d-flex flex-wrap">`;
-    domString +=  `<div class="card-body ${studentArray[i].house}">`;
+        domString += `<div class="card" style="width: 18rem"; "d-flex flex-wrap">`;
+        domString +=  `<div class="card-body ${studentArray[i].house}">`;
     domString += `<h5 class="card-title">${studentArray[i].name}</h5>`;
     domString +=  `<h6 class="card-subtitle mb-2 text-muted">${studentArray[i].house}</h6>`;
     domString +=  `<p class="card-text">Welcome to our house!!!  Please learn our rules and conduct yourself appropriately.</p>`;
-    domString += `<a onClick = "removeStudent(${i})" id = "expel">Expel</a>`
+    domString += `<button id = "${studentArray[i].id}">Expel</button>`
     domString += `</div>`;
     domString += `</div>`;
 
@@ -110,6 +113,9 @@ for(let i =0; i < studentArray.length; i++){
     
 }
 printToDom('card',domString);
+
+
+
 };
 
 const events = () => {
