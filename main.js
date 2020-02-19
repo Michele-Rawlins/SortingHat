@@ -27,7 +27,9 @@ cardAppear(createStudent);
 
 
 const removeStudent = (i)=> {
-    removeOrigStudent = createStudent.splice(i,1)
+    for(let i = 0; i < studentArray.length; i++)
+        if(studentArray[i].id === id)
+             removeOrigStudent = createStudent.splice(i,1)
     expelStudent.push(removeOrigStudent);
     console.log(expelStudent);
     
@@ -38,6 +40,12 @@ const removeStudent = (i)=> {
 
 
  const expelButtons = ()=> {
+
+
+
+
+
+
      //get expel buttons (all) as document.getelementsby class name
 //push into a new const and loop over const 
 //button "I" add event listerner
@@ -79,6 +87,10 @@ printToDom('formplaceholder',domString);
 sortButton();
 
 
+removeStudent();
+
+
+
 
 };
 
@@ -107,7 +119,7 @@ const cardAppear= (studentArray)=>{
     domString += `<button id = "${studentArray[i].id}">Expel</button>`
     domString += `</div>`;
     domString += `</div>`;
-
+    
     
     
     
@@ -117,6 +129,9 @@ printToDom('card',domString);
 
 
 };
+
+
+
 
 const events = () => {
     document.getElementById('form').addEventListener('click',formAppear);
