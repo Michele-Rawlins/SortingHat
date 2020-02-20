@@ -26,22 +26,26 @@ cardAppear(createStudent);
  };
 
 
-const removeStudent = (i)=> {
-    for(let i = 0; i < studentArray.length; i++)
-        if(studentArray[i].id === id)
-             removeOrigStudent = createStudent.splice(i,1)
-    expelStudent.push(removeOrigStudent);
-    console.log(expelStudent);
+ const removeStudent = (i)=> {
+   createStudent.splice(i,1);
+   cardAppear(createStudent);
+//    expelStudent.push()
+ };
+    // expelStudent.push(removeOrigStudent);
+    // console.log(expelStudent);
     
     // let removeCard = document.getElementById("expel");
     // removeCard.splice(buildStudent);
-};
+// };
 
 
 
- const expelButtons = ()=> {
+ const expelButtons = (arr)=> {
+     for(i = -1; i < arr.length; i++){
+      document.getElementsById(`${arr[i].id}`).addEventListener('click', removeStudent)
+        } 
 
-
+    };
 
 
 
@@ -55,7 +59,7 @@ const removeStudent = (i)=> {
 
 
    console.log('expelButton');
- };
+ 
 
 
 // const buttonId = e.target.id;
@@ -111,12 +115,12 @@ const cardAppear= (studentArray)=>{
     for(let i =0; i < studentArray.length; i++){
     
     
-        domString += `<div class="card" style="width: 18rem"; "d-flex flex-wrap">`;
-        domString +=  `<div class="card-body ${studentArray[i].house}">`;
+    domString += `<div class="card" style="width: 18rem"; "d-flex flex-wrap">`;
+    domString +=  `<div class="card-body ${studentArray[i].house}">`;
     domString += `<h5 class="card-title">${studentArray[i].name}</h5>`;
     domString +=  `<h6 class="card-subtitle mb-2 text-muted">${studentArray[i].house}</h6>`;
     domString +=  `<p class="card-text">Welcome to our house!!!  Please learn our rules and conduct yourself appropriately.</p>`;
-    domString += `<button id = "${studentArray[i].id}">Expel</button>`
+    domString +=  `<a onclick="removeStudent(${i})" id="${studentArray[i].id}" href="#" class="expel">Expel</a>`
     domString += `</div>`;
     domString += `</div>`;
     
@@ -140,3 +144,10 @@ const events = () => {
 }
 
 events();
+
+const init = () => {
+events();
+cardAppear();
+formAppear();
+};
+init();
